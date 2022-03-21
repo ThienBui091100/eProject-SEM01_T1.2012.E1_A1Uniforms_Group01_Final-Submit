@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html class="js modern mod-js mod-flexbox mod-flexboxlegacy mod-canvas mod-no-touch mod-draganddrop mod-rgba mod-hsla mod-multiplebgs mod-backgroundsize mod-borderimage mod-borderradius mod-boxshadow mod-textshadow mod-opacity mod-cssanimations mod-csscolumns mod-cssgradients mod-cssreflections mod-csstransforms mod-csstransforms3d mod-csstransitions mod-fontface mod-generatedcontent mod-video mod-audio mod-boxsizing" lang="en">
+  <head>
+    <title>Duckies</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	 <!-- Custom Theme files -->
+   <link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+   <!-- shop css -->
+   <link href="css/shop.css" type="text/css" rel="stylesheet" media="all">
+   <!-- Owl-Carousel-CSS -->
+   <link rel="stylesheet" href="css/owl.carousel.css" type="text/css" media="all">
+   <!-- flexslider-css -->
+   <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
+
+   <link href="css/style.css" type="text/css" rel="stylesheet" media="all">
+   <!-- font-awesome icons -->
+   <link href="css/fontawesome-all.min.css" rel="stylesheet">
+   <!-- //Custom Theme files -->
+   <link rel=stylesheet href="style.css">
+        <style>
+        body{
+            font-family:sans-serif
+        }
+            p {
+      font-family:  sans-serif;
+      font-size: 16px;
+      color:red;
+      line-height: 28px;
+      text-align: center;
+  }
+    .fa.fa-cart-plus{
+        color:#222;
+    }
+      header,image{
+        padding: 10px;
+        border: none;
+      }
+          .carousel-inner img {
+          width: 500%;
+          min-height: 200px;
+          background-color: lightyellow;
+        }
+        /* Hide the carousel text when the screen is less than 600 pixels wide */
+        @media (max-width: 600px) {
+          .carousel-caption {
+            display: none; 
+            text-decoration-color: red;
+          }
+        }
+            footer {
+      text-align: left;
+      padding: 3px;
+      background-color:white;
+      color: blue;
+    }
+    .col-lg-12{
+        background-color:chocolate;
+        border: none;
+      }
+      li a{
+        color:rgb(0, 0, 0);
+        font-size:medium
+      }
+    * {
+      box-sizing: border-box;
+    }
+    /* Create two equal columns that floats next to each other */
+    .column {
+      float: left;
+      height: 100%;
+      width: 18.9%;
+      padding: 5px 10px -5px 10px;
+      margin: 0px 1px 5px 6px;
+    }
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    /* Style the buttons */
+    .btn {
+      border: none;
+      outline: none;
+      padding: 7px 20px;
+      background-color: #ffffff;
+      cursor: pointer;
+    }
+    
+    .btn:hover {
+      background-color: rgb(255, 255, 255);
+    }
+    
+    .btn.active {
+      background-color: rgb(219, 223, 166);
+      color: white;
+    }
+    .rowmenu::after{
+        clear: both;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    /* Float four columns side by side */
+    .columnn {
+      float: left;
+      width: 25%;
+      padding: 0 10px;
+    }
+    
+    /* Remove extra left and right margins, due to padding */
+    #roww {margin: 0 -5px;}
+    
+    /* Clear floats after the columns */
+    #roww:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    
+    /* Responsive columns */
+    @media screen and (max-width: 600px) {
+      .column {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+      }
+    }
+    
+    /* Style the counter cards */
+    .cardd {
+      padding: 16px;
+      text-align: center;
+      background-color: #f1f1f1;
+    }
+    .pagination {
+      display: inline-block;
+    }
+    
+    .pagination a {
+      color: black;
+      float: left;
+      padding: 8px 16px;
+      text-decoration: none;
+    }
+    
+    .pagination a.active {
+      background-color: #4CAF50;
+      color: rgb(0, 0, 0);
+      border-radius: 5px;
+    }
+    
+    .pagination a:hover:not(.active) {
+      background-color: #ddd;
+      border-radius: 5px;
+    }
+    
+      </style>
+    </head>
+    <body>
+      <style>
+          p {
+    font-family:  sans-serif;
+    font-size: 16px;
+    color:red;
+    line-height: 28px;
+    text-align: center;
+}
+     li a{
+    color:rgb(0, 0, 0);
+    font-size:medium
+  }
+  nav{
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 75px;
+    background: linear-gradient(to right, #da7517 0%,#eb4141 100%); 
+    padding: 0 30px;
+    box-sizing: border-box;
+   
+}
+
+nav .brand{
+    float: left;
+    height: 100%;
+    line-height: 80px;
+}
+nav .brand h3{
+    margin: 0;
+    padding: 16%;
+    color: #fff;
+}
+nav ul{
+    float: right;
+    display: flex;
+    margin:0;
+    padding: 0;
+}
+nav ul li{
+    list-style: none;
+}
+nav ul li a{
+    position: relative;
+    display: block;
+    height: 80px;
+    line-height: 80px;
+    padding: 0 18px;
+    box-sizing: border-box;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s
+}
+nav ul li a:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 87%;
+    background: #fff;
+    transform-origin: right;
+    z-index: -1;
+    transform: scaleX(0);
+    transition:  transform 0.5s;
+}
+nav ul li a:hover:before{
+    transform-origin: left;
+    transform: scaleX(1);
+}
+nav ul li a:hover{
+    color: #6d6d6d;
+    text-decoration: none;
+}
+.nut_dropdown {
+  display:contents;
+  color: white;
+  background-color:rgba(236, 102, 12, 0.966);
+  height: 80px;
+  line-height: 80px;
+  padding: 0 20px;
+  border: none;
+  box-sizing: border-box;
+ 
+}
+/* Thiết lập vị trí cho thẻ div với class dropdown*/
+.dropdown {
+  position:relative;
+  display: inline-block;
+}
+/* Nội dung Dropdown */
+.noidung_dropdown {
+  /*Ẩn nội dung các đường dẫn*/
+  display: none;
+  position:relative;
+  background-color: #ffffff;
+  min-width: 120px;
+  padding: 0px 0px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+/* Thiết kế style cho các đường dẫn trong Dropdown */
+.noidung_dropdown a {
+  color: black;
+  text-align:center;
+  text-decoration: none;
+  display: block;
+}
+input[type="search"]{
+    width:300px;
+    margin-top:7%;
+    padding: 3%;
+    border: solid 1px white;
+    border-radius: 17px
+}
+.fa.fa-th-large{
+    color:#222
+}
+
+/* thay đổi màu background khi hover vào đường dẫn */
+.noidung_dropdown a:hover {color: rgb(255, 255, 255); background-color:#5e5e5e}
+/* hiển thị nội dung dropdown khi hover */
+.dropdown:hover .noidung_dropdown {display:block;}
+    header,image{
+      padding: 10px;
+      border: none;
+    }
+        .carousel-inner img {
+        width: 500%;
+        min-height: 200px;
+        background-color: lightyellow;
+      }
+      /* Hide the carousel text when the screen is less than 600 pixels wide */
+      @media (max-width: 600px) {
+        .carousel-caption {
+          display: none; 
+          text-decoration-color: red;
+        }
+      }
+          footer {
+    text-align: left;
+    padding: 3px;
+    background-color:white;
+    color: blue;
+  }
+  .col-lg-12{
+      background-color:chocolate;
+      border: none;
+    }
+    li a{
+      color:rgb(0, 0, 0);
+      font-size:large
+    }
+  * {
+    box-sizing: border-box;
+  }
+  /* Create two equal columns that floats next to each other */
+  .column {
+    float: left;
+    height: 100%;
+    width: 18.9%;
+    padding: 5px 10px -5px 10px;
+    margin: 0px 1px 5px 6px;
+  }
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  /* Style the buttons */
+  .btn {
+    border: none;
+    outline: none;
+    padding: 7px 20px;
+    color:#222;
+    background-color: #ffffff;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    background-color: rgb(241, 95, 28);
+    color:#fff
+  }
+  
+  .btn.active {
+    background-color: rgb(219, 223, 166);
+    color: white;
+  }
+  .rowmenu::after{
+      clear: both;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  /* Float four columns side by side */
+  .columnn {
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+  }
+  
+  /* Remove extra left and right margins, due to padding */
+  #roww {margin: 0 -5px;}
+  
+  /* Clear floats after the columns */
+  #roww:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive columns */
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
+  
+  /* Style the counter cards */
+  .cardd {
+    padding: 16px;
+    text-align: center;
+    background-color: #f1f1f1;
+  }
+  .pagination {
+    display: inline-block;
+  }
+  
+  .pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+  }
+  
+  .pagination a.active {
+    background-color: #4CAF50;
+    color: rgb(0, 0, 0);
+    border-radius: 5px;
+  }
+  
+  .pagination a:hover:not(.active) {
+    background-color: #ddd;
+    border-radius: 5px;
+  }
+  .footer-distributed{
+      background: #666;
+      box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+      box-sizing: border-box;
+      width: 100%;
+      text-align: left;
+      font: bold 16px sans-serif;
+      padding: 55px 50px;
+    }
+    
+    .footer-distributed .footer-left,
+    .footer-distributed .footer-center,
+    .footer-distributed .footer-right{
+      display: inline-block;
+      vertical-align: top;
+    }
+    
+    /* Footer left */
+    
+    .footer-distributed .footer-left{
+      width: 40%;
+    }
+    
+    /* The company logo */
+    
+    .footer-distributed h3{
+      color:  #ffffff;
+      font: normal 36px 'Open Sans', cursive;
+      margin: 0;
+    }
+    
+    .footer-distributed h3 span{
+      color:  lightseagreen;
+    }
+    
+    /* Footer links */
+    
+    .footer-distributed .footer-links{
+      color:  #ffffff;
+      margin: 20px 0 12px;
+      padding: 0;
+    }
+    
+    .footer-distributed .footer-links a{
+      display:inline-block;
+      line-height: 1.8;
+      font-weight:400;
+      text-decoration: none;
+      color:  inherit;
+    }
+    
+    .footer-distributed .footer-company-name{
+      color:  #222;
+      font-size: 14px;
+      font-weight: normal;
+      margin: 0;
+    }
+    
+    /* Footer Center */
+    
+    .footer-distributed .footer-center{
+      width: 35%;
+    }
+    
+    .footer-distributed .footer-center i{
+      background-color:  #33383b;
+      color: #ffffff;
+      font-size: 25px;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 42px;
+      margin: 10px 15px;
+      vertical-align: middle;
+    }
+    
+    .footer-distributed .footer-center i.fa-envelope{
+      font-size: 17px;
+      line-height: 38px;
+    }
+    
+    .footer-distributed .footer-center p{
+      display: inline-block;
+      color: #ffffff;
+      font-weight:400;
+      vertical-align: middle;
+      margin:0;
+    }
+    
+    .footer-distributed .footer-center p span{
+      display:block;
+      font-weight: normal;
+      font-size:14px;
+      line-height:2;
+    }
+    
+    .footer-distributed .footer-center p a{
+      color:  lightseagreen;
+      text-decoration: none;;
+    }
+    
+    .footer-distributed .footer-links a:before {
+      content: "|";
+      font-weight:300;
+      font-size: 20px;
+      left: 0;
+      color: #fff;
+      display: inline-block;
+      padding-right: 5px;
+    }
+    
+    .footer-distributed .footer-links .link-1:before {
+      content: none;
+    }
+    
+    /* Footer Right */
+    
+    .footer-distributed .footer-right{
+      width: 20%;
+    }
+    
+    .footer-distributed .footer-company-about{
+      line-height: 20px;
+      color:  #92999f;
+      font-size: 13px;
+      font-weight: normal;
+      margin: 0;
+    }
+    
+    .footer-distributed .footer-company-about span{
+      display: block;
+      color:  #ffffff;
+      font-size: 14px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    
+    .footer-distributed .footer-icons{
+      margin-top: 25px;
+    }
+    
+    .footer-distributed .footer-icons a{
+      display: inline-block;
+      width: 35px;
+      height: 35px;
+      cursor: pointer;
+      background-color:  #33383b;
+      border-radius: 2px;
+    
+      font-size: 20px;
+      color: #ffffff;
+      text-align: center;
+      line-height: 35px;
+    
+      margin-right: 3px;
+      margin-bottom: 5px;
+    }
+    li a{
+      color:rgb(255, 255, 255);
+      font-size:medium;
+      font-family:  sans-serif;}
+    /* If you don't want the footer to be responsive, remove these media queries */
+    
+    @media (max-width: 880px) {
+    
+      .footer-distributed{
+        font: bold 14px sans-serif;
+      }
+    
+      .footer-distributed .footer-left,
+      .footer-distributed .footer-center,
+      .footer-distributed .footer-right{
+        display: block;
+        width: 100%;
+        margin-bottom: 40px;
+        text-align: center;
+      }
+    
+      .footer-distributed .footer-center i{
+        margin-left: 0;
+      }
+    
+    }
+    </style>
+
+
+  <header>
+    <nav>
+  
+      <div id="menu">
+      
+        <ul>
+          
+          <li><a href="Index.html"><i class="fa fa-home" aria-hidden="true"></i>HOME PAGE</a></li>
+                  <div class="dropdown">
+                      <li class="nut_dropdown"><a href="2productshirt.html"><i class="fa fa-shopping-bag" aria-hidden="true"></i> PRODUCTS</a></li>
+                      <ul><div class="noidung_dropdown">
+                        <li><a href="2productshirt.html">Shirts</a></li>
+                        <li><a href="productskirt.html">Skirts</a></li>
+                        <li><a href="productfrock.html">Frocks</a></li>
+                        <li><a href="productptthirts.html">P.T. T-shirts</a></li>
+                        <li><a href="productptshorts.html">P.T. short</a></li>
+                        <li><a href="productpttrackpants.html">P.T. track-pants</a></li>
+                        <li><a href="productptbeilts.html">Belts</a></li>
+                        <li><a href="productptties.html">Ties</a></li>
+                        <li><a href="productlogos.html">Logos</a></li>
+                        <li><a href="productsocks.html">Socks</a></li>
+                      </div></ul>
+                    </div>
+              <li class="nut_dropdown"><a href="3support.html"><i class="fa fa-envelope" aria-hidden="true"></i> SUPPORT</a></li>
+            <li><a href="4Aboutus.html"><i class="fa fa-info" aria-hidden="true"></i> ABOUT US</a></li>
+            <li><a href="5Feedback.html"><i class="fa fa-star" aria-hidden="true"></i> FEEDBACK</a></li>
+                  <div class="dropdown">
+                      <li class="nut_dropdown"><a href="#"><i class="fa fa-user" aria-hidden="true"></i>ACCOUNT</a></li>
+                      <ul><div class="noidung_dropdown">
+                          <li><a href="#">Login</a></li>
+                          <li><a href="#">Register</a></li>
+                          <li><a href="#">Logout</a></li>
+                      </div></ul>
+                  </div>
+            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+            
+        </ul>
+      </div>
+  </nav>
+  
+        <!--==================================================end nav============================================-->
+<br><br><br>
+<div class="container">
+<img src="image/Duckies/banner.jpg" width="100%" style="padding-top:0">
+  </div>
+  <br>
+  
+   <div>
+  <div class="section singlep_btm pb-5">
+    <div class="container">
+        <div class="new_arrivals">
+            
+            <div class="card-group my-5">
+                <!-- card -->
+                <div class="card product-men p-3">
+                    <div class="men-thumb-item">
+                        <img src="image/Duckies/Shirt.jpg" style="height: 240px;" alt="img" class="card-img-top">
+                        <div class="men-cart-pro">
+                            <div class="inner-men-cart-pro">
+                                <a href="image/Duckies/Shirt.jpg" class="link-product-add-cart">See product</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card body -->
+                    <div class="card-body  py-3 px-2">
+                        <h5 class="card-title text-capitalize">Duckies Shirts</h5>
+                        <div class="card-text d-flex justify-content-between">
+                            <p class="text-dark font-weight-bold">$199</p>
+                            <p class="line-through">$215</p>
+                        </div>
+                    </div> 
+                    <!-- card footer -->
+                    <div class="card-footer d-flex justify-content-end">
+                        <form action="#" method="post">
+                            <input type="hidden" name="cmd" value="_cart">
+                            <input type="hidden" name="add" value="1">
+                            <input type="hidden" name="hub_item" value="Duckies Shirts">
+                            <input type="hidden" name="amount" value="199">
+                            <button type="submit" class="hub-cart phub-cart btn">
+                                <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                            </button>
+                            <a href="#" data-toggle="modal" data-target="#myModal1"></a>
+                        </form>
+                    </div>
+                </div>
+                <!-- //card -->
+                <!-- card -->
+                <div class="card product-men p-3">
+                    <div class="men-thumb-item">
+                        <img src="image/Duckies/shorts.jpg" alt="img" class="card-img-top" style="height: 240px;">
+                        <div class="men-cart-pro">
+                            <div class="inner-men-cart-pro">
+                                <a href="image/Duckies/shorts.jpg 02.jpg" class="link-product-add-cart">See product</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card body -->
+                    <div class="card-body  py-3 px-2">
+                        <h5 class="card-title text-capitalize">Duckies Short</h5>
+                        <div class="card-text d-flex justify-content-between">
+                            <p class="text-dark font-weight-bold">$99</p>
+                            <p class="line-through">$115</p>
+                        </div>
+                    </div>
+                    <!-- card footer -->
+                    <div class="card-footer d-flex justify-content-end">
+                        <form action="#" method="post">
+                            <input type="hidden" name="cmd" value="_cart">
+                            <input type="hidden" name="add" value="1">
+                            <input type="hidden" name="hub_item" value="Duckies Short">
+                            <input type="hidden" name="amount" value="99">
+                            <button type="submit" class="hub-cart phub-cart btn">
+                                <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                            </button>
+                            <a href="#" data-toggle="modal" data-target="#myModal1"></a>
+                        </form>
+                    </div>
+                </div>
+                <!-- //card -->
+                <!-- card -->
+                <div class="card product-men p-3">
+                    <div class="men-thumb-item">
+                        <img src="image/Duckies/skirts.jpg" style="height: 240px;" alt="img" class="card-img-top">
+                        <div class="men-cart-pro">
+                            <div class="inner-men-cart-pro">
+                                <a href="image/Duckies/skirts.jpg" class="link-product-add-cart">See product</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card body -->
+                    <div class="card-body  py-3 px-2">
+                        <h5 class="card-title text-capitalize">Duckies Skirts</h5>
+                        <div class="card-text d-flex justify-content-between">
+                            <p class="text-dark font-weight-bold">$89</p>
+                            <p class="line-through">$95</p>
+                        </div>
+                    </div>
+                    <!-- card footer -->
+                    <div class="card-footer d-flex justify-content-end">
+                        <form action="#" method="post">
+                            <input type="hidden" name="cmd" value="_cart">
+                            <input type="hidden" name="add" value="1">
+                            <input type="hidden" name="hub_item" value="Duckies Skirts">
+                            <input type="hidden" name="amount" value="89">
+                            <button type="submit" class="hub-cart phub-cart btn">
+                                <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                            </button>
+                            <a href="#" data-toggle="modal" data-target="#myModal1"></a>
+                        </form>
+                    </div>
+                </div>
+                <!-- //card -->
+                <!-- card -->
+                <div class="card product-men p-3">
+                    <div class="men-thumb-item">
+                        <img src="image/Duckies/t-shirts.jpg" style="height: 240px;" alt="img" class="card-img-top">
+                        <div class="men-cart-pro">
+                            <div class="inner-men-cart-pro">
+                                <a href="image/Duckies/t-shirts.jpg" class="link-product-add-cart">See product</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card body -->
+                    <div class="card-body  py-3 px-2">
+                        <h5 class="card-title text-capitalize">Duckies T-Shirts</h5>
+                        <div class="card-text d-flex justify-content-between">
+                            <p class="text-dark font-weight-bold">$119</p>
+                            <p class="line-through">$135</p>
+                        </div>
+                    </div>
+                    <!-- card footer -->
+                    <div class="card-footer d-flex justify-content-end">
+                        <form action="#" method="post">
+                            <input type="hidden" name="cmd" value="_cart">
+                            <input type="hidden" name="add" value="1">
+                            <input type="hidden" name="hub_item" value="Duckies T-Shirts">
+                            <input type="hidden" name="amount" value="119">
+                            <button type="submit" class="hub-cart phub-cart btn">
+                                <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                            </button>
+                            <a href="#" data-toggle="modal" data-target="#myModal1"></a>
+                        </form>
+                    </div>
+                </div>
+                <!-- //card -->
+                <!-- //row  -->
+            </div>
+            <!--//new_arrivals-->
+        </div>
+    </div>
+  </div>
+  
+ 
+ 
+<br>
+<br> 
+<div>
+   <!--================================FOOTER===================================================-->
+ <footer class="footer-distributed">
+	  
+	<div class="footer-left">
+
+	  <h3>A-1 Uniforms VN</h3>
+
+	  <p class="footer-links">
+		<a href="Index.html" class="link-1">Home</a>
+		
+		
+	  
+		<a href="2productshirt.html">Products</a>
+	  
+		<a href="4Aboutus.html">About us</a>
+		
+		<a href="3support.html">Support</a>
+		
+		<a href="5Feedback.html">Feedback</a>
+	  </p>
+
+	  <p class="footer-company-name">© 2020 All rights reserved by A-1 Uniforms VN</p>
+	</div>
+
+	<div class="footer-center">
+
+	  <div>
+		<i class="fa fa-map-marker"></i>
+		<p><A href="https://goo.gl/maps/tQBX8sa1Tzxze2p88"><span>243A Hoang Dieu Street</span> Ward 8, 4 District</A></p>
+	  </div>
+
+	  <div>
+		<i class="fa fa-phone"></i>
+		<p><a href="tel:+84 786585686">+84 786585686</a></p>
+	  </div>
+
+	  <div>
+		<i class="fa fa-envelope"></i>
+		<p><a href="mailto:a1uniformsvn@gmail.com">a1uniformsvn@gmail.com</a></p>
+	  </div>
+
+	</div>
+
+	<div class="footer-right">
+
+	  <p class="footer-company-about">
+		<span>About A-1 Uniforms VN</span>
+		This website is dedicated to A-1 Uniform VN, a subsidiary of A-1 Uniforms Group. Follow us to get the latest news.	  </p>
+
+	  <div class="footer-icons">
+
+		<a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
+		<a href="https://twitter.com/"><i class="fa fa-twitter"></i></a>
+		<a href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a>
+		<a href="https://github.com/"><i class="fa fa-github"></i></a>
+
+	  </div>
+
+	</div>
+  </div>
+  </footer>
+</div>
+
+
+    
+    <script src="js/jquery-2.2.3.min.js"></script>
+   
+    <!-- smooth dropdown -->
+    <script>
+        $(document).ready(function () {
+            $('ul li.dropdown').hover(function () {
+                $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(200);
+            }, function () {
+                $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(200);
+            });
+        });
+    </script>
+    <!-- //smooth dropdown -->
+    <!-- script for password match -->
+    <script>
+        window.onload = function () {
+            document.getElementById("password1").onchange = validatePassword;
+            document.getElementById("password2").onchange = validatePassword;
+        }
+
+        function validatePassword() {
+            var pass2 = document.getElementById("password2").value;
+            var pass1 = document.getElementById("password1").value;
+            if (pass1 != pass2)
+                document.getElementById("password2").setCustomValidity("Passwords Don't Match");
+            else
+                document.getElementById("password2").setCustomValidity('');
+            //empty string means no validation error
+        }
+    </script>
+    <!-- script for password match -->
+	<!-- cart-js -->
+	<script src="js/minicart.js"></script>
+	<script>
+		hub.render();
+
+		hub.cart.on('new_checkout', function (evt) {
+			var items, len, i;
+
+			if (this.subtotal() > 0) {
+				items = this.items();
+
+				for (i = 0, len = items.length; i < len; i++) {}
+			}
+		});
+	</script>
+	<!-- //cart-js -->
+	<!-- price range (top products) -->
+	<script src="js/jquery-ui.js"></script>
+	<script>
+		//<![CDATA[ 
+		$(window).load(function () {
+			$("#slider-range").slider({
+				range: true,
+				min: 0,
+				max: 9000,
+				values: [50, 6000],
+				slide: function (event, ui) {
+					$("#amount").val("$" + ui.values[0] + " - $" + ui.values[1]);
+				}
+			});
+			$("#amount").val("$" + $("#slider-range").slider("values", 0) + " - $" + $("#slider-range").slider("values", 1));
+
+		}); //]]>
+	</script>
+	<!-- //price range (top products) -->
+	<script src="js/bootstrap.js"></script>
+	<!-- start-smoth-scrolling -->
+	<script src="js/move-top.js"></script>
+	<script src="js/easing.js"></script>
+	<script>
+		jQuery(document).ready(function ($) {
+			$(".scroll").click(function (event) {
+				event.preventDefault();
+				$('html,body').animate({
+					scrollTop: $(this.hash).offset().top
+				}, 1000);
+			});
+		});
+	</script>
+	<!-- start-smoth-scrolling -->
+	<!-- here stars scrolling icon -->
+	<script>
+		$(document).ready(function () {
+			/*
+				var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+				};
+			*/
+
+			$().UItoTop({
+				easingType: 'easeOutQuart'
+			});
+
+		});
+	</script>
+	<!-- //here ends scrolling icon -->
+	<!-- smoothscroll -->
+	<script src="js/SmoothScroll.min.js"></script>
+	<!-- //smoothscroll -->
+      
+</body>

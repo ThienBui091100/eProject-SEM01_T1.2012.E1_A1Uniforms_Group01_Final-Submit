@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Payment Guide</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+  
+    <link rel="stylesheet" href="assets/css/style.css">
+	<style>
+		body{
+			background-color: #f1efef;
+		}
+		h2{
+			color:rgb(212, 115, 23);
+			text-align:left;
+			padding-bottom:2%;
+            font-weight:bold
+		}
+		.content{
+			padding: 100px 0 30px 50px;
+            text-align:left;
+            width:45%;
+		}
+        .content p{
+            font-family:sans-serif;
+            font-size:large
+        }
+        .content ul li{
+            overflow:unset;
+        }
+        .content ul li a{
+            font-size:large;
+            font-family:sans-serif;
+            text-align:left;
+            color:black
+        }
+        .content button{
+            width:130px;
+            height:40px;
+            margin-right:5px
+        }
+		row{
+            width:90%
+        }
+		.registration-form form{
+			background-color: rgb(255, 255, 255);
+			max-width: 600px;
+			margin: auto;
+			padding: 40px 70px;
+			border-top-left-radius: 50px;
+			border-top-right-radius: 30px;
+			box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.075);
+		}
+		
+		.registration-form .form-icon{
+			text-align: center;
+			background: linear-gradient(to right, #da7517 0%,#eb4141 100%); 
+			border-radius: 50%;
+			font-size: 40px;
+			color: white;
+			width: 100px;
+			height: 100px;
+			margin: auto;
+			margin-bottom: 50px;
+			line-height: 100px;
+		}
+		
+		.registration-form .item{
+			border-radius: 20px;
+			margin-bottom: 25px;
+			padding: 10px 20px;
+		}
+		
+		.registration-form .create-account{
+			border-radius: 30px;
+			padding: 10px 20px;
+			font-size: 18px;
+			font-weight: bold;
+			background: linear-gradient(to right, #da7517 0%,#eb4141 100%); 
+			border: none;
+			color: white;
+			margin-top: 20px;
+		}
+		
+		.registration-form .social-media{
+			max-width: 600px;
+			background-color: #fff;
+			margin: auto;
+			padding: 35px 0;
+			text-align: center;
+			border-bottom-left-radius: 30px;
+			border-bottom-right-radius: 30px;
+			color: #9fadca;
+			border-top: 1px solid #dee9ff;
+			box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.075);
+		}
+		
+		.registration-form .social-icons{
+			margin-top: 30px;
+			margin-bottom: 16px;
+		}
+		
+		.registration-form .social-icons a{
+			font-size: 23px;
+			margin: 0 3px;
+			color: #ffffff;
+			border: 1px solid;
+			border-radius: 50%;
+			width: 45px;
+			display: inline-block;
+			height: 45px;
+			text-align: center;
+			background: linear-gradient(to right, #da7517 0%,#eb4141 100%); 
+			line-height: 45px;
+		}
+		
+		.registration-form .social-icons a:hover{
+			text-decoration: none;
+			opacity: 0.6;
+		}
+		
+		@media (max-width: 576px) {
+			.registration-form form{
+				padding: 50px 20px;
+			}
+		
+			.registration-form .form-icon{
+				width: 70px;
+				height: 70px;
+				font-size: 30px;
+				line-height: 70px;
+			}
+		}
+		nav{
+			position:absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 75px;
+			background: linear-gradient(to right, #da7517 0%,#eb4141 100%); 
+			padding: 0 30px ;
+			box-sizing: border-box;
+		   
+		}
+
+		nav .brand h3{
+			margin: 0;
+			padding: 16%;
+			color: #fff;
+		}
+		nav ul{
+			float: right;
+			display: flex;
+			margin:0;
+			padding: 0;
+		}
+		nav ul li{
+			list-style: none;
+		}
+		nav ul li a{
+			position: relative;
+			display: block;
+			height: 80px;
+			line-height: 80px;
+			padding: 0 21px;
+			box-sizing: border-box;
+			color: #fff;
+			text-decoration: none;
+			text-transform: uppercase;
+			transition: 0.5s
+		}
+		nav ul li a:before{
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 87%;
+			background: #fff;
+			transform-origin: right;
+			z-index: -1;
+			transform: scaleX(0);
+			transition:  transform 0.5s;
+		}
+		nav ul li a:hover:before{
+			transform-origin: left;
+			transform: scaleX(1);
+		}
+		nav ul li a:hover{
+			color: #222222;
+			text-decoration: none;
+		}
+		input[type="search"]{
+			width:300px;
+			margin-top:6%;
+			padding: 2%;
+			border: solid 1px white;
+			border-radius: 17px
+		}
+		.nut_dropdown {
+			display:contents;
+			color: white;
+			background-color:rgba(236, 102, 12, 0.966);
+			height: 80px;
+			line-height: 80px;
+			padding: 0 20px;
+			border: none;
+			box-sizing: border-box;
+		   
+		  }
+		 /* Thiết lập vị trí cho thẻ div với class dropdown*/
+		  .dropdown {
+			position:relative;
+			display: inline-block;
+		  }
+		 /* Nội dung Dropdown */
+		  .noidung_dropdown {
+			/*Ẩn nội dung các đường dẫn*/
+			display: none;
+			position:relative;
+			background-color: #ffffff;
+			min-width: 120px;
+			padding: 0px 0px;
+			box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+			z-index: 1;
+		  }
+		 /* Thiết kế style cho các đường dẫn trong Dropdown */
+		  .noidung_dropdown a {
+			color: black;
+			text-align:center;
+			text-decoration: none;
+			display: block;}
+		.noidung_dropdown a:hover {color: rgb(255, 255, 255); background-color:#5e5e5e}
+		.dropdown:hover .noidung_dropdown {display:block;}
+		@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,500,300,700);
+
+    * {
+      font-family: Open Sans;
+    }
+            
+    .footer-distributed{
+		background: rgb(75, 75, 75); 
+		box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+      box-sizing: border-box;
+      width: 100%;
+      text-align: left;
+      font: bold 16px sans-serif;
+      padding: 55px 50px;
+    }
+    
+    .footer-distributed .footer-left,
+    .footer-distributed .footer-center,
+    .footer-distributed .footer-right{
+      display: inline-block;
+      vertical-align: top;
+    }
+    
+    /* Footer left */
+    
+    .footer-distributed .footer-left{
+      width: 40%;
+    }
+    
+    /* The company logo */
+    
+    .footer-distributed h3{
+      color:  #ffffff;
+      font: normal 36px 'Open Sans', cursive;
+      margin: 0;
+    }
+    
+    .footer-distributed h3 span{
+      color:  lightseagreen;
+    }
+    
+    /* Footer links */
+    
+    .footer-distributed .footer-links{
+      color:  #ffffff;
+      margin: 20px 0 12px;
+      padding: 0;
+    }
+    
+    .footer-distributed .footer-links a{
+      display:inline-block;
+      line-height: 1.8;
+      font-weight:400;
+      text-decoration: none;
+      color:  inherit;
+    }
+    
+    .footer-distributed .footer-company-name{
+      color:  rgb(255, 255, 255);
+      font-size: 14px;
+      font-weight: normal;
+      margin: 0;
+    }
+    
+    /* Footer Center */
+    
+    .footer-distributed .footer-center{
+      width: 35%;
+    }
+    
+    .footer-distributed .footer-center i{
+      background-color:  #33383b;
+      color: #ffffff;
+      font-size: 25px;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 42px;
+      margin: 10px 15px;
+      vertical-align: middle;
+    }
+    
+    .footer-distributed .footer-center i.fa-envelope{
+      font-size: 17px;
+      line-height: 38px;
+    }
+    
+    .footer-distributed .footer-center p{
+      display: inline-block;
+      color: #ffffff;
+      font-weight:400;
+      vertical-align: middle;
+      margin:0;
+    }
+    
+    .footer-distributed .footer-center p span{
+      display:block;
+      font-weight: normal;
+      font-size:14px;
+      line-height:2;
+    }
+    
+    .footer-distributed .footer-center p a{
+      color:  lightseagreen;
+      text-decoration: none;;
+    }
+    
+    .footer-distributed .footer-links a:before {
+      content: "|";
+      font-weight:300;
+      font-size: 20px;
+      left: 0;
+      color: #fff;
+      display: inline-block;
+      padding-right: 5px;
+    }
+    
+    .footer-distributed .footer-links .link-1:before {
+      content: none;
+    }
+    
+    /* Footer Right */
+    
+    .footer-distributed .footer-right{
+      width: 20%;
+    }
+    
+    .footer-distributed .footer-company-about{
+      line-height: 20px;
+      color:  #ffffff;
+      font-size: 13px;
+      font-weight: normal;
+      margin: 0;
+    }
+    
+    .footer-distributed .footer-company-about span{
+      display: block;
+      color:  #ffffff;
+      font-size: 14px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    
+    .footer-distributed .footer-icons{
+      margin-top: 25px;
+    }
+    
+    .footer-distributed .footer-icons a{
+      display: inline-block;
+      width: 35px;
+      height: 35px;
+      cursor: pointer;
+      background-color:  #33383b;
+      border-radius: 2px;
+    
+      font-size: 20px;
+      color: #ffffff;
+      text-align: center;
+      line-height: 35px;
+    
+      margin-right: 3px;
+      margin-bottom: 5px;
+    }
+    hr{
+        color:#222
+    }
+    /* If you don't want the footer to be responsive, remove these media queries */
+    
+    @media (max-width: 880px) {
+    
+      .footer-distributed{
+        font: bold 14px sans-serif;
+      }
+    
+      .footer-distributed .footer-left,
+      .footer-distributed .footer-center,
+      .footer-distributed .footer-right{
+        display: block;
+        width: 100%;
+        margin-bottom: 40px;
+        text-align: center;
+      }
+    
+      .footer-distributed .footer-center i{
+        margin-left: 0;
+      }
+    
+    }
+	</style>
+	
+</head>
+<body>
+	<nav>
+		<div id="menu">
+		<!--<div class="brand">
+				<h3>Payment</h3>
+			</div>-->
+			<ul>
+                <li><a href=""><i class="fa fa-home" aria-hidden="true"></i> HOME</a></li>
+                <li><input type="search" placeholder="Search anything here..." ></li>
+                <div class="dropdown">
+                    <li class="nut_dropdown"><a href="#"><i class="fa fa-shopping-bag" aria-hidden="true"></i> PRODUCTS</a></li>
+                    <ul><div class="noidung_dropdown">
+                        <li><a href="#">PRD1</a></li>
+                        <li><a href="#">PRD2</a></li>
+                        <li><a href="#">PRD3</a></li>
+                    </div></ul>
+                  </div>
+				<div class="dropdown">
+                    <li class="nut_dropdown"><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i> SUPPORT</a></li>
+                    <ul><div class="noidung_dropdown">
+                        <li><a href="">Order Guide</a></li>
+                        <li><a href="">Payment Guide</a></li>
+                        <li><a href="">Payment Form</a></li>
+						<li><a href="#">Question</a></li>
+                    </div></ul>
+                  </div>
+				<li><a href=""><i class="fa fa-info" aria-hidden="true"></i> ABOUT US</a></li>
+				<li><a href=""><i class="fa fa-star" aria-hidden="true"></i> FEEDBACK</a></li>
+                <div class="dropdown">
+                    <li class="nut_dropdown"><a href="#"><i class="fa fa-user" aria-hidden="true"></i> ACCOUNT</a></li>
+                    <ul><div class="noidung_dropdown">
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="Register.html">Register</a></li>
+                        <li><a href="login.html">Logout</a></li>
+                    </div></ul>
+                  </div>
+        <li><a><i class="fa fa-shopping-cart" style="color:white; font-size: 20px"></i></a></li>
+        <li><a><i class="fa fa-bell" style="color:white; font-size: 20px"></i></a></li>
+			</ul>
+		</div>
+	</nav>
+    <!--==================================================end nav============================================-->
+   
+	<div class="row">
+        <div class="content" style="background-color: #f6f7f3;">
+            <h2>Category</h2>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Account</a></li>
+                <li><a href="#">Frequently asked questions</a></li>
+                <li><a href="#">Dilivery</a></li>
+                <li><a href="#">ExShop Mall</a></li>
+            </ul>
+            <h3 style="color:black"><b>Is this helpful to you ?</b></h3>
+            <button type="button" class="btn btn-success">Yes</button><button type="button" class="btn btn-secondary">No</button>
+        </div>
+        <div class="content">
+            <h2>How to Order on ExShop Website ?</h2>
+            <p>Step 1: Search for the product you need to buy in one of the ways</p>
+
+            <p>Step 2: Refer to and choose the right product.s Some information to know when choosing a product:</p>
+                <ul>
+                    <li><a>Image, product name</a></li>
+                    <li><a>Vendor Category (Regular Shop, Favorite Shop, Favorite Shop +, Shopee Mall)</a></li>
+                    <li><a>Product price (original price / discount)</a></li>
+                    <li><a>Place of sale (province / city)</a></li>
+                    <li><a>Product reviews</a></li>
+                    <li><a>Number of products sold</a></li>
+                    <li><a>Information about structure, features, warranty (if any)</a></li>
+                </ul>
+            <p>Step 3: Select the product
+                <ul><li><a>If you do not click Buy now, select the icon to go to Cart to select the product.</a></li></ul>
+                
+            <p>Step 4: Use a discount code
+                <ul>
+                    <li><a>In case of buying combo / gift, remember to choose the included product. Instructions to choose gifts included HERE</a></li>
+                </ul>
+               
+                <p>Step 5: Check and pay</p>
+                <ul>
+                    <li><A>Review the receiving address, shipping unit, and payment method before pressing the ORDER button.</A></li>
+                    <li><A>After reading the instructions, head back to the Shopee app to start your endless shopping journey!</A></p>
+                    </li>
+                </ul>
+        </div>
+        
+    </div>
+	<div>
+		<footer class="footer-distributed">
+	  
+		  <div class="footer-left">
+	  
+			<h3>ExShop</h3>
+	  
+			<p class="footer-links">
+			  <a href="Homepage.html" class="link-1">Home</a>
+			  
+			  
+			
+			  <a href="#">Products</a>
+			
+			  <a href="Aboutus - Copy.html">About us</a>
+			  
+			  <a href="#">Support</a>
+			  
+			  <a href="#">Feedback</a>
+			</p>
+	  
+			<p class="footer-company-name">Exshop © 2021</p>
+		  </div>
+	  
+		  <div class="footer-center">
+	  
+			<div>
+			  <i class="fa fa-map-marker"></i>
+			  <p><span>243A Hoang Dieu Street</span> Ward 8, 4 District</p>
+			</div>
+	  
+			<div>
+			  <i class="fa fa-phone"></i>
+			  <p>+84 786585686</p>
+			</div>
+	  
+			<div>
+			  <i class="fa fa-envelope"></i>
+			  <p><a href="mailto:exshop@gmail.com">exshop@gmail.com</a></p>
+			</div>
+	  
+		  </div>
+	  
+		  <div class="footer-right">
+	  
+			<p class="footer-company-about">
+			  <span>About Exshop</span>
+			  This website is a tool that brings everything in the world to you including available to your requirements.
+			</p>
+	  
+			<div class="footer-icons">
+	  
+			  <a href="#"><i class="fa fa-facebook"></i></a>
+			  <a href="#"><i class="fa fa-twitter"></i></a>
+			  <a href="#"><i class="fa fa-linkedin"></i></a>
+			  <a href="#"><i class="fa fa-github"></i></a>
+	  
+			</div>
+	  
+		  </div>
+		</div>
+		</footer>
+	  
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+    <script src="assets/js/script.js"></script>
+	<script>$(document).ready(function(){
+		$('#birth-date').mask('00/00/0000');
+		$('#phone-number').mask('0000-0000');
+	   })</script>
+</body>
+</html>

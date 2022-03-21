@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <title>Feedback</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--========================================API GOOGLE==============================================================-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+ 
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="validate.js"></script>
+    <style>
+      *
+      {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          font-family: 'Poppins', sans-serif;
+      }
+      body{
+        background-color: rgb(143, 143, 143)
+        /*background-image:url('image/feedback-4.jpg');
+        background-size: 100%;
+        background-repeat: no-repeat;*/
+      }
+      nav{
+        position:absolute
+      }
+      .contact
+      {
+          position: relative;
+          min-height: 100vh;
+          padding: 50px 50px;
+          display:block;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+      }
+      
+      .contact .contact
+      {
+          max-width: 800px;
+          text-align: center;
+      }
+      
+      .contact .contact h2
+      {
+          font-size: 36px;
+          font-weight: 500;
+          color: #fff;
+      }
+      
+      .contact .contact p
+      {
+          font-weight: 300;
+          color: #fff;
+      }
+      /*.container
+      {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-top: 30px;
+      }*/
+      
+      .container .contactinfo
+      {
+          width: 100%;
+          display: block;
+          text-align:left;
+          padding-left: 10%
+      }
+      
+      .container .contactinfo .box
+      {
+          position: relative;
+          padding: 0px 0;
+          display: flex;
+      
+      }
+      
+      .container .contactinfo .box .icon
+      {
+          min-width: 60px;
+          height: 60px;
+          background: #fff;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 50%;
+          font-size: 20px;
+          
+      }
+      
+      .container .contactinfo .box .text
+      {
+          display: flex;
+          margin-left: 20px;
+          font-size: 16px;
+          color: #fff;
+          flex-direction: column;
+          font-weight: 300;
+      }
+      
+      .container .contactinfo .box .text h3
+      {
+         font-weight: 500;
+         color: black;
+      
+      }
+      
+      .contactform
+      {
+          width: 50%;
+          padding: 40px;
+          background-color: rgb(230, 230, 230);
+          margin-left:25%;
+          margin-top:7%;
+          margin-bottom:20px;
+          border-radius:15px
+      }
+      
+      .contactform h2
+      {
+          font-size: 30px;
+          color: #333;
+          font-weight: 500;
+      }
+      
+      .contactform .inputbox
+      {
+          position: relative;
+          width: 100%;
+          margin-top: 10px;
+      
+      
+      }
+      
+      .contactform .inputbox input,
+      .contactform .inputbox textarea
+      {
+          width: 100%;
+          padding: 10px 10px;
+          font-size: 16px;
+          margin: 10px 0;
+          border: 1px solid rgba(59, 59, 59, 0.479);
+          border-radius:15px;
+          outline: none;
+          resize: none;
+      
+      }
+      
+      .contactform .inputbox span
+      {
+          position: relative;
+          left: 0;
+          padding: 5px 0;
+          font-size: 16px;
+          margin: 10px 0;
+          pointer-events: none;
+          transition: 0.5s;
+          color: #666;
+      }
+      
+      .contactform .inputbox input:focus ~ span,
+      .contactform .inputbox input:valid ~ span,
+      .contactform .inputbox textarea:focus ~ span,
+      .contactform .inputbox textarea:valid ~ span
+      {
+          color: #e91e63;
+          font-size: 12px;
+          transform: translateY(-20px);
+      }
+      
+      input[type="submit"]
+      {
+          width: 100%;
+          background-color:rgb(255, 102, 0);
+          color: #fff;
+          border: none;
+          cursor: pointer;
+          padding: 20px;
+          font-size: 18px;
+      }
+      input[type=submit]:hover{
+        background-color:rgb(36, 209, 45)
+      }
+      .row{
+        width:100%
+      }
+      .columnside{
+        width: 40%;
+        padding-top:7%
+      }
+      .columnmid{
+        width:60%
+      }
+      @media (max-width:991px)
+      {
+          .contact
+          {
+              padding: 50px;
+          }
+          .container
+          {
+              flex-direction: column;
+          }
+          .container .contactinfo
+          {
+              margin-bottom: 40px;
+          }
+          .container .contactinfo
+          {
+              width: 50%;
+          }
+          .contactform
+          {
+              width: 120%;
+          }
+      }
+      div.stars {
+        width: 270px;
+        display: inline-block;
+      }
+       
+      input.star { display: none; }
+       
+      label.star {
+        float: right;
+        padding: 10px ;
+        font-size: 35px;
+        color: rgba(0, 0, 0, 0.664);
+        transition: all 0.2s;
+      }
+       
+      input.star:checked ~ label.star:before {
+        content: '\f005';
+        color: rgb(255, 208, 0);
+        transition: all .25s;
+      }
+       
+      input.star-5:checked ~ label.star:before {
+        color: rgb(255, 225, 0);
+        text-shadow: 0 0 20px #952;
+      }
+       
+      input.star-1:checked ~ label.star:before { color: rgb(216, 88, 33); }
+      input.star-2:checked ~ label.star:before { color: rgb(214, 157, 51); }
+      input.star-3:checked ~ label.star:before { color: rgb(224, 208, 64); }
+       
+      label.star:hover { transform: rotate(-15deg) scale(1.3); }
+       
+      label.star:before {
+        content: '\f006';
+        font-family: FontAwesome;
+      }
+     
+    </style>
+  </head>
+  <body>
+    <!--Start Navigation===================================================================================== --><nav>
+  
+    <div id="menu">
+    
+      <ul>
+        
+        <li><a href="Index.html"><i class="fa fa-home" aria-hidden="true"></i>HOME PAGE</a></li>
+                <div class="dropdown">
+                    <li class="nut_dropdown"><a href="2Product.html"><i class="fa fa-shopping-bag" aria-hidden="true"></i> PRODUCTS</a></li>
+                    <ul><div class="noidung_dropdown">
+                      <li><a href="#">Shirts</a></li>
+          <li><a href="productskirt.html">Skirts</a></li>
+          <li><a href="productfrock.html">Frocks</a></li>
+          <li><a href="productptthirts.html">P.T. T-shirts</a></li>
+          <li><a href="productptshorts.html">P.T. short</a></li>
+          <li><a href="productpttrackpants.html">P.T. track-pants</a></li>
+          <li><a href="productptbeilts.html">Belts</a></li>
+          <li><a href="productptties.html">Ties</a></li>
+          <li><a href="productlogos.html">Logos</a></li>
+          <li><a href="productsocks.html">Socks</a></li>
+                    </div></ul>
+                  </div>
+            <li class="nut_dropdown"><a href="3support.html"><i class="fa fa-envelope" aria-hidden="true"></i> SUPPORT</a></li>
+          <li><a href="4Aboutus.html"><i class="fa fa-info" aria-hidden="true"></i> ABOUT US</a></li>
+          <li><a href="5Feedback.html"><i class="fa fa-star" aria-hidden="true"></i> FEEDBACK</a></li>
+                <div class="dropdown">
+                    <li class="nut_dropdown"><a href="#"><i class="fa fa-user" aria-hidden="true"></i>ACCOUNT</a></li>
+                    <ul><div class="noidung_dropdown">
+                        <li><a href="#">Login</a></li>
+                        <li><a href="#">Register</a></li>
+                        <li><a href="#">Logout</a></li>
+                    </div></ul>
+                </div>
+          <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+          
+      </ul>
+    </div>
+</nav>
+     <!--contact-->
+
+      <div class="row">
+       
+         <div class="contactform">
+           <form action="thanksfb.html">
+               <h2><b>Send Feedback</b></h2>
+               <div class="inputbox">
+                   <input type="text" name="" placeholder="Full Name..." required>
+               </div>
+     
+               <div class="inputbox">
+                   <input type="text" name="" placeholder="Email..." required="required">
+               </div>
+     
+               <div class="inputbox">
+                   <textarea required="required" placeholder="Type your Message..."></textarea>
+               </div>
+               
+                  
+              <div class="stars">
+                <form action="">
+                  <input class="star star-5" id="star-5" type="radio" name="star"/>
+                  <label class="star star-5" for="star-5"></label>
+                  <input class="star star-4" id="star-4" type="radio" name="star"/>
+                  <label class="star star-4" for="star-4"></label>
+                  <input class="star star-3" id="star-3" type="radio" name="star"/>
+                  <label class="star star-3" for="star-3"></label>
+                  <input class="star star-2" id="star-2" type="radio" name="star"/>
+                  <label class="star star-2" for="star-2"></label>
+                  <input class="star star-1" id="star-1" type="radio" name="star"/>
+                  <label class="star star-1" for="star-1"></label>
+                </div>
+
+               <div class="inputbox">
+                   <a href="#"><input type="submit" name="" value="Send message"></a>
+               </div>
+           </form>
+       </div>
+       
+      
+      </div>
+     <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15678.247860241463!2d106.68667721574104!3d10.768202977232455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f6c5dcbba55%3A0x2c2a93a32f6c9021!2zSOG6u20gMjQzQSBIb8OgbmcgRGnhu4d1LCBwaMaw4budbmcgOCwgUXXhuq1uIDQsIFRow6BuaCBwaOG7kSBI4buTIENow60gTWluaCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1619454185568!5m2!1svi!2s" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>-->
+
+        
+     
+   <!--================================FOOTER===================================================-->
+<footer class="footer-distributed">
+	  
+	<div class="footer-left">
+
+	  <h3>A-1 Uniforms VN</h3>
+
+	  <p class="footer-links">
+		<a href="Index.html" class="link-1">Home</a>
+		
+		
+	  
+		<a href="2productshirt.html">Products</a>
+	  
+		<a href="4Aboutus.html">About us</a>
+		
+		<a href="3support.html">Support</a>
+		
+		<a href="5Feedback.html">Feedback</a>
+	  </p>
+
+	  <p class="footer-company-name">© 2020 All rights reserved by A-1 Uniforms VN</p>
+	</div>
+
+	<div class="footer-center">
+
+	  <div>
+		<i class="fa fa-map-marker"></i>
+		<p><A href="https://goo.gl/maps/tQBX8sa1Tzxze2p88"><span>243A Hoang Dieu Street</span> Ward 8, 4 District</A></p>
+	  </div>
+
+	  <div>
+		<i class="fa fa-phone"></i>
+		<p><a href="tel:+84 786585686">+84 786585686</a></p>
+	  </div>
+
+	  <div>
+		<i class="fa fa-envelope"></i>
+		<p><a href="mailto:a1uniformsvn@gmail.com">a1uniformsvn@gmail.com</a></p>
+	  </div>
+
+	</div>
+
+	<div class="footer-right">
+
+	  <p class="footer-company-about">
+		<span>About A-1 Uniforms VN</span>
+		This website is dedicated to A-1 Uniform VN, a subsidiary of A-1 Uniforms Group. Follow us to get the latest news.	  </p>
+
+	  <div class="footer-icons">
+
+		<a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
+		<a href="https://twitter.com/"><i class="fa fa-twitter"></i></a>
+		<a href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a>
+		<a href="https://github.com/"><i class="fa fa-github"></i></a>
+
+	  </div>
+
+	</div>
+  </div>
+  </footer></div>
+  </body>
+</html>
